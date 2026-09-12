@@ -13,7 +13,7 @@ window.WEDDING_CONFIG = {
     ogTitle:           'Badarudheen KP & Hudha Abdulsalam | Wedding Invitation',
     ogDescription:     'You are warmly invited to join us for the Nikah and Wedding Celebration of Badarudheen KP & Hudha Abdulsalam — Sunday, 04 October 2026.',
     ogImage:           'og-image.jpg',
-    canonicalUrl:      'https://skenllp.github.io/badarudheen-hudha/',
+    canonicalUrl:      'https://badarudheen-hudha.vercel.app/',
     themeColor:        '#C8A96A',
   },
 
