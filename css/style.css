@@ -426,10 +426,10 @@ body.gate-active {
   min-height: 100vh;
   min-height: 100dvh;
   display: flex;
-  align-items: stretch;
+  align-items: center;
   justify-content: center;
   overflow: clip;
-  background: #120905;
+  background: #FAF6F0;
 }
 
 /* Background photo */
@@ -445,7 +445,7 @@ body.gate-active {
   height: 100%;
   object-fit: cover;
   object-position: center 20%;
-  filter: none;
+  filter: brightness(0.98);
   transform: scale(1.02);
   animation: gateSlowZoom 18s ease-in-out infinite alternate;
 }
@@ -461,13 +461,11 @@ body.gate-active {
   inset: 0;
   z-index: 1;
   background: linear-gradient(
-    to bottom,
-    rgba(10, 5, 2, 0.65) 0%,
-    rgba(10, 5, 2, 0.25) 18%,
-    rgba(10, 5, 2, 0.00) 35%,
-    rgba(10, 5, 2, 0.00) 65%,
-    rgba(10, 5, 2, 0.40) 85%,
-    rgba(10, 5, 2, 0.75) 100%
+    180deg,
+    rgba(255, 255, 255, 0.46) 0%,
+    rgba(255, 255, 255, 0.32) 30%,
+    rgba(255, 255, 255, 0.40) 70%,
+    rgba(250, 246, 240, 0.65) 100%
   );
   pointer-events: none;
 }
@@ -525,21 +523,15 @@ body.gate-active {
   position: relative;
   z-index: 3;
   width: 100%;
-  max-width: 680px;
-  min-height: 100vh;
-  min-height: 100dvh;
+  max-width: 620px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
-  padding: 36px 20px 85px;
-  box-sizing: border-box;
-}
-
-.hero-header-block {
-  width: 100%;
+  justify-content: center;
   text-align: center;
+  padding: 40px 20px;
+  box-sizing: border-box;
 }
 
 .hero-divider {
@@ -576,63 +568,66 @@ body.gate-active {
 
 .hero-label {
   font-family: var(--font-body);
-  font-size: clamp(10px, 1.8vw, 13px);
+  font-size: clamp(11px, 2vw, 14px);
   letter-spacing: 0.3em;
-  color: #F0C94A;
+  color: #8F6608;
+  font-weight: 600;
   text-transform: uppercase;
   margin-bottom: 6px;
   opacity: 0;
   animation: fadeUp 1s ease 0.6s forwards;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.9), 0 0 20px rgba(0, 0, 0, 0.7);
+  text-shadow: 0 1px 8px rgba(255, 255, 255, 0.95);
 }
 
 .hero-welcoming {
   font-family: var(--font-serif);
-  font-size: clamp(11px, 2.2vw, 15px);
+  font-size: clamp(13px, 2.5vw, 18px);
+  font-weight: 700;
   letter-spacing: 0.18em;
-  color: rgba(250, 246, 240, 0.92);
+  color: #7A1230;
   text-transform: uppercase;
   margin-bottom: 12px;
   opacity: 0;
   animation: fadeUp 1s ease 0.8s forwards;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.9), 0 0 20px rgba(0, 0, 0, 0.7);
+  text-shadow: 0 1px 8px rgba(255, 255, 255, 0.95);
 }
 
 .hero-names {
-  display: flex;
-  align-items: baseline;
-  justify-content: center;
-  gap: 12px;
-  flex-wrap: wrap;
-  margin: 0;
+  margin: 4px 0 16px;
   opacity: 0;
   animation: fadeUp 1.2s ease 1s forwards;
+  text-align: center;
 }
 
 .hero-name-groom,
 .hero-name-bride {
-  font-family: var(--font-serif);
-  font-size: clamp(26px, 5.5vw, 44px);
+  display: block;
+  font-family: var(--font-script);
+  font-size: clamp(48px, 8.5vw, 84px);
   font-weight: 700;
-  color: #FFFFFF;
-  letter-spacing: 0.04em;
-  line-height: 1.1;
-  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.95), 0 4px 25px rgba(0, 0, 0, 0.85);
+  color: #2E101A;
+  line-height: 0.92;
+  letter-spacing: 0.01em;
+  text-shadow: 0 2px 10px rgba(255, 255, 255, 0.95), 0 0 25px rgba(255, 255, 255, 0.85), 0 4px 20px rgba(74, 14, 36, 0.25);
 }
 
 .hero-name-groom::first-letter,
 .hero-name-bride::first-letter {
-  color: #F0C94A;
-  font-size: 1.12em;
+  font-family: var(--font-serif);
+  font-size: 1.15em;
+  font-weight: 700;
+  color: #7A1230;
+  text-shadow: 0 2px 8px rgba(255, 255, 255, 0.9);
 }
 
 .hero-and {
+  display: block;
   font-family: var(--font-script);
-  font-size: clamp(24px, 4.5vw, 36px);
-  color: #F0C94A;
-  margin: 0 4px;
+  font-size: clamp(26px, 4.8vw, 42px);
+  color: #9E782F;
+  margin: 4px 0;
   line-height: 1;
-  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.9);
+  text-shadow: 0 2px 8px rgba(255, 255, 255, 0.95);
 }
 
 .hero-love-tag {
@@ -680,53 +675,48 @@ body.gate-active {
   letter-spacing: 0.02em;
 }
 
-.hero-footer-block {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
 .hero-date {
-  margin: 0;
+  margin-top: 18px;
   opacity: 0;
   animation: fadeUp 1s ease 1.4s forwards;
   display: inline-flex;
   flex-direction: column;
   align-items: center;
-  padding: 12px 28px 14px;
-  background: rgba(18, 10, 6, 0.60);
+  padding: 14px 34px 16px;
+  background: rgba(255, 255, 255, 0.82);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-  border: 1px solid rgba(212, 160, 23, 0.45);
+  border: 1px solid rgba(195, 148, 48, 0.55);
   border-radius: 8px;
-  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 10px 35px rgba(74, 14, 36, 0.12), 0 2px 10px rgba(0, 0, 0, 0.04);
 }
 
 .hero-date-day {
   font-family: var(--font-serif);
   font-size: clamp(11px, 2vw, 13px);
-  color: rgba(248, 235, 215, 0.9);
+  color: #7A1230;
   letter-spacing: 0.25em;
+  font-weight: 600;
   text-transform: uppercase;
   margin: 0;
 }
 
 .hero-date-number {
   font-family: var(--font-serif);
-  font-size: clamp(26px, 5vw, 38px);
-  color: #F0C94A;
+  font-size: clamp(30px, 5.5vw, 46px);
+  color: #8F6608;
   font-weight: 700;
   letter-spacing: 0.06em;
   line-height: 1.1;
   margin: 2px 0;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
 
 .hero-date-month {
   font-family: var(--font-serif);
   font-size: clamp(11px, 2vw, 13px);
-  color: rgba(248, 235, 215, 0.9);
+  color: #7A1230;
   letter-spacing: 0.22em;
+  font-weight: 600;
   text-transform: uppercase;
   margin: 0;
 }
