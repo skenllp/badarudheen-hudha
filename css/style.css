@@ -444,7 +444,7 @@ body.gate-active {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 20%;
+  object-position: center 15%;
   filter: none;
   transform: scale(1.04);
   animation: gateSlowZoom 18s ease-in-out infinite alternate;
@@ -462,10 +462,10 @@ body.gate-active {
   z-index: 1;
   background: linear-gradient(
     to bottom,
-    rgba(20, 10, 5, 0.38) 0%,
-    rgba(20, 10, 5, 0.12) 30%,
-    rgba(20, 10, 5, 0.12) 65%,
-    rgba(20, 10, 5, 0.48) 100%
+    rgba(10, 5, 2, 0.40) 0%,
+    rgba(10, 5, 2, 0.05) 30%,
+    rgba(10, 5, 2, 0.05) 65%,
+    rgba(10, 5, 2, 0.55) 100%
   );
   pointer-events: none;
 }
